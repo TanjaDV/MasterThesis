@@ -1,0 +1,12 @@
+batch_size: 128
+dataset: cifar10
+dataset_mode: test
+dir_main_results: C:\Users\t.devries\Documents\GitHub\PolarSSL\results\
+downstream:
+  weight_decay: null
+downstream_weights_file: C:\Users\t.devries\Documents\GitHub\PolarSSL\results_thesis\2023-06-10_11-03_rotation_cifar10_supervised\w_0.01\m_0.9\lr_0.01\downstream_weights.hdf5
+experiment: evaluate-test-supervised
+pretext:
+  weight_decay: null
+pretext_task: rotation
+resized_img_size: 32

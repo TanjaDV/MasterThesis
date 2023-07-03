@@ -1,0 +1,41 @@
+batch_size: 64
+dataset: eurosat
+dataset_mode: validation
+dir_dataset: C:\Users\t.devries\Documents\Datasets\EuroSAT\2750
+dir_main_results: C:\Users\t.devries\Documents\GitHub\PolarSSL\results\
+downstream:
+  learning_rate:
+  - 0.01
+  momentum:
+  - 0.09
+  weight_decay:
+  - 0.01
+downstream_epochs: 100
+experiment: less-data
+less_data_subsets:
+- 1
+- 0.6
+- 0.2
+- 0.1
+- 0.05
+- 0.01
+pretext:
+  weight_decay: null
+pretext_epochs: 100
+pretext_task: scale
+random:
+  learning_rate:
+  - 0.01
+  momentum:
+  - 0.9
+  weight_decay:
+  - 0.001
+resized_img_size: 32
+supervised:
+  learning_rate:
+  - 0.001
+  momentum:
+  - 0.9
+  weight_decay:
+  - 0.1
+val_split: 0.2

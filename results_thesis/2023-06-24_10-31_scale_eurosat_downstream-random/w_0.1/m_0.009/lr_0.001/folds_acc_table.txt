@@ -1,0 +1,1 @@
+folds accuracy array = [0.787407398223877]

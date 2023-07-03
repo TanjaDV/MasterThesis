@@ -1,0 +1,36 @@
+# dataset settings
+dataset: 'eurosat'
+dir_dataset: C:\Users\t.devries\Documents\Datasets\EuroSAT\2750
+pretext_task: 'scale'
+resized_img_size: 32
+batch_size: 64
+
+# experiment settings
+experiment: 'both'
+dataset_mode: 'cross-validation'
+n_folds: 5
+cv_min_acc: 0.84
+pretext_epochs: 100
+downstream_epochs: 100
+
+# set the folder where you want to store the results
+dir_main_results: C:\Users\t.devries\Documents\GitHub\PolarSSL\results\
+
+# pretext task hyperparameters
+pretext:
+  weight_decay:
+
+# downstream task hyperparameters
+downstream:
+  weight_decay:
+    - 0.1
+    - 0.01
+    - 0.001
+  momentum:
+    - 0.9
+    - 0.09
+    - 0.009
+  learning_rate:
+    - 0.1
+    - 0.01
+    - 0.001

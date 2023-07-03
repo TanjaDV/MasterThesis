@@ -1,0 +1,2 @@
+weight decay = 0.0100,  momentum = 0.0090, learning rate = 0.0100, iterations = 5, val_acc_mean = 0.8608, val_acc_std = 0.0017
+weight decay = 0.0100,  momentum = 0.0090, learning rate = 0.0010, iterations = 3, val_acc_mean = 0.8429, val_acc_std = 0.0029

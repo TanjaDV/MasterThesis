@@ -1,0 +1,83 @@
+# dataset settings
+  dataset: 'cifar10'
+  pretext_task: 'rotation'
+  resized_img_size: 32
+  batch_size: 128
+
+# directory settings
+  dir_main_results:
+    # set the folder where you want to store the results
+  downstream_weights_file:
+    # give location of the downstream weights of model trained on the validation set
+    # used for: 'evaluate-test-()'
+  pretext_weights_file:
+    # give location of the pretext weights of model trained on the validation set
+    # used for: 'evaluate-test-self-supervised'
+
+# experiment settings
+  experiment:
+    # options: 'pretext', 'downstream', 'both', 'supervised', 'downstream-random', 'less-data', 'fig5a',
+                'evaluate-test-supervised', 'evaluate-test-self-supervised', 'evaluate-test-random'
+    # 'both': the hyperparameters values from downstream are used for both the pretext task and the downstream task
+  pretext_epochs: 100
+    # used for: 'pretext', 'both', 'less-data', 'fig5a'
+    # default value is 100
+  downstream_epochs: 100
+    # used for: 'downstream', 'both', 'supervised', 'downstream-random', 'less-data', 'fig5a'
+    # default value is 100
+  dataset_mode:
+    # options: 'validation', 'test'
+  val_split: 0.2
+    # used if dataset_mode is 'validation', default value is 0.2
+
+  # pretext task hyperparameters
+  pretext:
+    weight_decay:
+      # This is how it should be when the setting is not used. We need pretext to be defined within the code.
+      # only used for: 'pretext', for other settings the downstream hyperparameters are also used for pretext
+
+  # downstream task hyperparameters
+  downstream:
+    weight_decay:
+      - 0.1
+      - 0.01
+      - 0.001
+    momentum:
+      - 0.9
+      - 0.09
+      - 0.009
+    learning_rate:
+      - 0.1
+      - 0.01
+      - 0.001
+      # These are the default parameters for hyperparameter search (same for pretext)
+      # used for: 'downstream', 'both', 'supervised', 'downstream-random', 'less-data', 'fig5a'
+
+  # supervised hyperparameters
+  supervised:
+    weight_decay:
+      - 0.01
+    momentum:
+      - 0.9
+    learning_rate:
+      - 0.01
+      # used for 'less-data' when the optimal supervised hyperparameters are not the same as self-supervised
+
+  # random hyperparameters
+  random:
+    weight_decay:
+      - 0.01
+    momentum:
+      - 0.9
+    learning_rate:
+      - 0.001
+      # used for 'less-data' when the optimal random hyperparameters are not the same as self-supervised
+
+  less_data_subsets:
+    - 0.004
+    - 0.02
+    - 0.08
+    - 0.2
+    - 1
+    # used for 'less-data'
+    # these are the matching numbers to the paper if we use testset

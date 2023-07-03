@@ -1,0 +1,26 @@
+batch_size: 64
+cv_min_acc: 0.95
+dataset: eurosat
+dataset_mode: cross-validation
+dir_dataset: E:\Eurosat\2750
+dir_main_results: C:\Users\i.giotis\PycharmProjects\Polar\PolarSSL\results\
+downstream:
+  learning_rate:
+  - 0.1
+  - 0.01
+  - 0.001
+  momentum:
+  - 0.9
+  - 0.09
+  - 0.009
+  weight_decay:
+  - 0.1
+  - 0.01
+  - 0.001
+downstream_epochs: 100
+experiment: supervised
+n_folds: 5
+pretext:
+  weight_decay: null
+pretext_task: scale
+resized_img_size: 32

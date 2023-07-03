@@ -1,0 +1,7 @@
+pip install tensorflow==2.3.1
+pip install matplotlib
+pip install pyyaml
+
+conda install -c anaconda cudatoolkit=10.1
+conda install -c anaconda cudnn=7.6.5
+conda install -c conda-forge scikit-learn

@@ -1,0 +1,32 @@
+batch_size: 128
+dataset: cifar10
+dataset_mode: test
+dir_main_results: C:\Users\t.devries\Documents\GitHub\PolarSSL\results\
+downstream:
+  learning_rate:
+  - 0.1
+  momentum:
+  - 0.09
+  weight_decay:
+  - 0.01
+downstream_epochs: 100
+experiment: less-data
+less_data_subsets:
+- 1
+- 0.6
+- 0.2
+- 0.1
+- 0.02
+- 0.004
+pretext:
+  weight_decay: null
+pretext_epochs: 100
+pretext_task: rotation
+resized_img_size: 32
+supervised:
+  learning_rate:
+  - 0.01
+  momentum:
+  - 0.9
+  weight_decay:
+  - 0.01

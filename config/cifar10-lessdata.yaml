@@ -1,0 +1,53 @@
+# dataset settings
+dataset: 'cifar10'
+pretext_task: 'rotation'
+resized_img_size: 32
+batch_size: 128
+
+# experiment settings
+experiment: 'less-data'
+pretext_epochs: 100
+downstream_epochs: 100
+dataset_mode: 'test'
+
+# set the folder where you want to store the results
+dir_main_results: C:\Users\t.devries\Documents\GitHub\PolarSSL\results\
+
+# pretext task hyperparameters
+pretext:
+  weight_decay:
+
+# downstream task hyperparameters
+downstream:
+  weight_decay:
+    - 0.01
+  momentum:
+    - 0.09
+  learning_rate:
+    - 0.1
+
+# supervised hyperparameters, used within less data function
+supervised:
+  weight_decay:
+    - 0.01
+  momentum:
+    - 0.9
+  learning_rate:
+    - 0.01
+
+# supervised hyperparameters, used within less data function
+random:
+  weight_decay:
+    - 0.01
+  momentum:
+    - 0.9
+  learning_rate:
+    - 0.001
+
+less_data_subsets:
+  - 1
+  - 0.6
+  - 0.2
+  - 0.1
+  - 0.02
+  - 0.004

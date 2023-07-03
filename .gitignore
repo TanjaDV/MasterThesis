@@ -1,0 +1,7 @@
+/workspace.xml
+/.vscode/
+/.idea/
+
+/results/
+*.pyc
+*.hdf5
