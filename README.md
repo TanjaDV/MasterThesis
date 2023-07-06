@@ -3,7 +3,7 @@
 ### Abstract thesis
 
 We made a self-supervised model with a pretext-task based on geometric transformations.
-Our model is based on RotNet, a model that predicts image rotations by Gidaris et al. \cite{gidaris2018unsupervised}.
+Our model is based on RotNet, a model that predicts image rotations by Gidaris et al. (https://arxiv.org/pdf/1803.07728.pdf).
 We implemented our model in TensorFlow, and were able to reproduce their results for rotation.
 The rotation model cannot be used for all datasets, for example datasets with a lot of top-down images or images of round objects.
 Therefore, we modified our network to predict the scale of an image.
